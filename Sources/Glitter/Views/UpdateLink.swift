@@ -27,9 +27,9 @@ import Sparkle
 // This is the view for the Check for Updates menu item
 // Note this intermediate view is necessary for the disabled state on the menu item to work properly before Monterey.
 // See https://stackoverflow.com/questions/68553092/menu-not-updating-swiftui-bug for more info
-public struct CheckForUpdatesView: View {
+public struct UpdateLink: View {
 
-    @ObservedObject private var checkForUpdatesViewModel: CheckForUpdatesViewModel
+    @ObservedObject private var updateLinkModel: UpdateLinkModel
 
     private let updater: SPUUpdater
 
@@ -37,11 +37,11 @@ public struct CheckForUpdatesView: View {
         self.updater = updater
 
         // Create our view model for our CheckForUpdatesView
-        self.checkForUpdatesViewModel = CheckForUpdatesViewModel(updater: updater)
+        self.updateLinkModel = UpdateLinkModel(updater: updater)
     }
 
     public var body: some View {
         Button("Check for Updates…", action: updater.checkForUpdates)
-            .disabled(!checkForUpdatesViewModel.canCheckForUpdates)
+            .disabled(!updateLinkModel.canCheckForUpdates)
     }
 }

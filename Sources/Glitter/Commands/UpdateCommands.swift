@@ -35,7 +35,7 @@ public struct UpdateCommands: Commands {
     public var body: some Commands {
 
         CommandGroup(before: .appSettings) {
-             CheckForUpdatesView(updater: updater)
+             UpdateLink(updater: updater)
          }
 
     }
