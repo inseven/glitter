@@ -29,6 +29,5 @@ ROOT_DIRECTORY="$SCRIPT_DIRECTORY/.."
 
 cd "$ROOT_DIRECTORY"
 
-xcodebuild -scheme Interact -showdestinations
-xcodebuild -scheme Interact -destination "platform=macOS" clean build
-xcodebuild -scheme Interact -destination "$DEFAULT_IPHONE_DESTINATION" clean build
+xcodebuild -scheme Glitter -showdestinations
+xcodebuild -scheme Glitter -destination "platform=macOS" clean build
