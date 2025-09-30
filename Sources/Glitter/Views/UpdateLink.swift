@@ -41,7 +41,11 @@ public struct UpdateLink: View {
     }
 
     public var body: some View {
-        Button("Check for Updates…", action: updater.checkForUpdates)
-            .disabled(!updateLinkModel.canCheckForUpdates)
+        Button {
+            updater.checkForUpdates()
+        } label: {
+            Label("Check for Updates…", systemImage: "square.and.arrow.down")
+        }
+        .disabled(!updateLinkModel.canCheckForUpdates)
     }
 }
