@@ -25,6 +25,7 @@ import SwiftUI
 import Sparkle
 
 // This view model class publishes when new updates can be checked by the user
+@MainActor
 final class UpdateLinkModel: ObservableObject {
     @Published var canCheckForUpdates = false
 
