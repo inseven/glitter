@@ -13,8 +13,8 @@ let package = Package(
             targets: ["Glitter"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/sparkle-project/Sparkle", exact: "2.7.0"),
-        .package(url: "https://github.com/inseven/licensable", exact: "0.0.13"),
+        .package(url: "https://github.com/sparkle-project/Sparkle", from: "2.7.0"),
+        .package(url: "https://github.com/inseven/licensable", from: "0.0.13"),
     ],
     targets: [
         .target(
